@@ -9,6 +9,14 @@ int Dif(int a, int b)
 {
 	return a - b;
 }
+int multiplication(int a, int b)
+{
+	return a * b;
+}
+double Divide(int a, int b)
+{
+	return (double)a / b;
+}
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -17,4 +25,6 @@ void main()
 	int c = Sum(a, b);
 	cout << "Сумма чисел: " << c;
 	cout << "\nРазность чисел: " << Dif(a, b);
+	cout << "\nПроизведение чисел: " << multiplication(a, b);
+	cout << "\nЧастное чисел: " << Divide(a, b);
 }
