@@ -1,9 +1,11 @@
 ﻿#include <iostream>
 using namespace std;
+
 int Sum(int a, int b);
 int Dif(int a, int b);
 int multiplication(int a, int b);
 double Divide(int a, int b);
+
 void main()
 {
 	setlocale(LC_ALL, "");
