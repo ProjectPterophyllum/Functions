@@ -73,7 +73,7 @@ float Sum(int array[], const int N)//Сумма всех чисел массив
 }
 float Avg(int array[], const int N)//Среднее арифметическое значение в массиве.
 {
-	return Sum(array, N) / N;
+	return (float)Sum(array, N) / N;
 }
 int minValueIn(int array[], const int N)//Минимальное значение в массиве
 {
