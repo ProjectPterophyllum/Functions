@@ -21,7 +21,7 @@ void main()
 	int array[N];
 	UniqueFillRand(1, 10, array, N);
 	Print(array, N);
-	Search(array, N);
+	//Search(array, N);
 	cout << Avg(array, N);
 }
 void Print(int array[], const int N)//Вывод массива в консоль.
@@ -59,8 +59,8 @@ void UniqueFillRand(int start, int end, int array[], const int N)//Функци�
 		do
 		{
 			uniq = randomize(start, end);
-			array[i] = uniq;
 		} while (SearchTarget(array, i, uniq));
+		array[i] = uniq;
 	}
 } 
 float Sum(int array[], const int N)//Сумма всех чисел массива.
