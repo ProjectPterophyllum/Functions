@@ -22,6 +22,7 @@ void main()
 	UniqueFillRand(1, 10, array, N);
 	Print(array, N);
 	Search(array, N);
+	cout << Avg(array, N);
 }
 void Print(int array[], const int N)//Вывод массива в консоль.
 {
