@@ -801,7 +801,7 @@ void Search(char array[N1][N2], const int N1, const int N2)
 {
 	int dynamicrange = 0;
 	int count = 1;
-	double* arr = new double[dynamicrange];
+	char* arr = new char[dynamicrange];
 	for (int k = 0; k < N1; k++)
 		for (int i = 0; i < N2 - 1; i++)
 		{
