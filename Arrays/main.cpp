@@ -86,16 +86,22 @@ bool SearchTarget(double array[N1][N2], int N1, int N2, double TargetKey);
 bool SearchTarget(char array[N1][N2], int N1, int N2, char TargetKey);
 //Функция поиска дубликатов.
 void Search(int array[], const int N);
+void Search(double array[], const int N);
+void Search(char array[], const int N);
+void Search(int array[N1][N2], const int N1, const int N2);
+void Search(double array[N1][N2], const int N1, const int N2);
+void Search(char array[N1][N2], const int N1, const int N2);
 //Главная функция.
 void main()
 {
 	setlocale(LC_ALL, "");
-	double array[N1][N2];
+	int array[N1][N2];
 	UniqueFillRand(10, 100, array, N1, N2);
 	Print(array, N1, N2);
 	cout << endl;
 	Sort(array, N1, N2);
 	Print(array, N1, N2);
+	Search(array, N1, N2);
 }
 //Вывод массива в консоль.
 void Print(int array[], const int N)
@@ -208,15 +214,6 @@ void UniqueFillRand(int start, int end, int array[], const int N)
 }
 void UniqueFillRand(double start, double end, double array[], const int N)
 {
-	if (end - start + 1 < N)
-	{
-		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
-		char choose = 0;
-		cin >> choose;
-		if (choose == 'Y' || choose == 'y')
-			FillRand(start, end, array, N);
-		return;
-	}
 	double uniq = 0;
 	for (int i = 0; i < N; i++)
 	{
@@ -272,15 +269,6 @@ void UniqueFillRand(int start, int end, int array[N1][N2], const int N1, const i
 }
 void UniqueFillRand(double start, double end, double array[N1][N2], const int N1, const int N2)
 {
-	if (end - start + 1 < N1 * N2)
-	{
-		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
-		char choose = 0;
-		cin >> choose;
-		if (choose == 'Y' || choose == 'y')
-			FillRand(start, end, array, N1, N2);
-		return;
-	}
 	double uniq = 0;
 	for (int i = 0; i < N1; i++)
 		for (int j = 0; j < N2; j++)
@@ -694,6 +682,149 @@ void Search(int array[], const int N)
 			count = 1;
 		}
 	}
+}
+void Search(double array[], const int N)
+{
+	int dynamicrange = 0;
+	int count = 1;
+	double* arr = new double[dynamicrange];
+	for (int i = 0; i < N - 1; i++)
+	{
+		if (SearchTarget(arr, dynamicrange, array[i]))
+			continue;
+		else
+		{
+			for (int j = i + 1; j < N; j++)
+			{
+				if (array[i] == array[j])
+				{
+					count++;
+				}
+			}
+			if (count > 1)
+			{
+				dynamicrange++;
+				arr[dynamicrange - 1] = array[i];
+				cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
+			}
+			count = 1;
+		}
+	}
+}
+void Search(char array[], const int N)
+{
+	int dynamicrange = 0;
+	int count = 1;
+	char* arr = new char[dynamicrange];
+	for (int i = 0; i < N - 1; i++)
+	{
+		if (SearchTarget(arr, dynamicrange, array[i]))
+			continue;
+		else
+		{
+			for (int j = i + 1; j < N; j++)
+			{
+				if (array[i] == array[j])
+				{
+					count++;
+				}
+			}
+			if (count > 1)
+			{
+				dynamicrange++;
+				arr[dynamicrange - 1] = array[i];
+				cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
+			}
+			count = 1;
+		}
+	}
+}
+void Search(int array[N1][N2], const int N1, const int N2)
+{
+	int dynamicrange = 0;
+	int count = 1;
+	int* arr = new int[dynamicrange];
+	for (int k = 0; k < N1; k++)
+		for (int i = 0; i < N2 - 1; i++)
+		{
+			if (SearchTarget(arr, dynamicrange, array[k][i]))
+				continue;
+			else
+			{
+				for (int j = i + 1; j < N2; j++)
+				{
+					if (array[k][i] == array[k][j])
+					{
+						count++;
+					}
+				}
+				if (count > 1)
+				{
+					dynamicrange++;
+					arr[dynamicrange - 1] = array[k][i];
+					cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
+				}
+				count = 1;
+			}
+		}
+}
+void Search(double array[N1][N2], const int N1, const int N2)
+{
+	int dynamicrange = 0;
+	int count = 1;
+	double* arr = new double[dynamicrange];
+	for (int k = 0; k < N1; k++)
+		for (int i = 0; i < N2 - 1; i++)
+		{
+			if (SearchTarget(arr, dynamicrange, array[k][i]))
+				continue;
+			else
+			{
+				for (int j = i + 1; j < N2; j++)
+				{
+					if (array[k][i] == array[k][j])
+					{
+						count++;
+					}
+				}
+				if (count > 1)
+				{
+					dynamicrange++;
+					arr[dynamicrange - 1] = array[k][i];
+					cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
+				}
+				count = 1;
+			}
+		}
+}
+void Search(char array[N1][N2], const int N1, const int N2)
+{
+	int dynamicrange = 0;
+	int count = 1;
+	double* arr = new double[dynamicrange];
+	for (int k = 0; k < N1; k++)
+		for (int i = 0; i < N2 - 1; i++)
+		{
+			if (SearchTarget(arr, dynamicrange, array[k][i]))
+				continue;
+			else
+			{
+				for (int j = i + 1; j < N2; j++)
+				{
+					if (array[k][i] == array[k][j])
+					{
+						count++;
+					}
+				}
+				if (count > 1)
+				{
+					dynamicrange++;
+					arr[dynamicrange - 1] = array[k][i];
+					cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
+				}
+				count = 1;
+			}
+		}
 }
 //Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
 bool SearchTarget(int array[], int N, int TargetKey)
