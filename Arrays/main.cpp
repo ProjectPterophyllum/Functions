@@ -1,49 +1,193 @@
 ﻿#include <iostream>
 using namespace std;
-//Перегрузку и для двумерных массивов сделаю потом, мало времени из-за работы.
-void Print(int array[], const int N);//Вывод массива в консоль.
-int randomize(int start, int end);//Генерация случайного числа из диапазона.
-void FillRand(int start, int end, int array[], const int N);//Заполнение массива случайными числами.
-void UniqueFillRand(int start, int end, int array[], const int N);//Функция для заполнения массива уникальными числами из диапазона.
-float Sum(int array[], const int N);//Сумма всех чисел массива.
-float Avg(int array[], const int N);//Среднее арифметическое значение в массиве.
-int minValueIn(int array[], const int N);//Минимальное значение в массиве.
-int maxValueIn(int array[], const int N);//Максимальное значение в массиве.
-void shiftLeft(int array[], const int N, int NumElem);//Сдвиг массива влево.
-void shiftRight(int array[], const int N, int NumElem);//Сдвиг массива вправо.
-void Sort(int array[], const int N);//Сортировка массива
-bool SearchTarget(int array[], int N, int TargetKey);//Функция поиска значения в массиве.
-void Search(int array[], const int N);//Функция поиска дубликатов в массиве.
+
+const int N1 = 10;
+const int N2 = 10;
+//Вывод массива в консоль.
+void Print(int array[], int N);
+void Print(double array[], int N);
+void Print(char array[], int N);
+void Print(int array[N1][N2], int N1, int N2);
+void Print(double array[N1][N2], int N1, int N2);
+void Print(char array[N1][N2], int N1, int N2);
+//Генерация случайного числа из диапазона.
+int randomize(int start, int end);
+double randomize(double start, double end);
+char randomize(char start, char end);
+//Заполнение массива случайными значениями.
+void FillRand(int start, int end, int array[], const int N);
+void FillRand(double start, double end, double array[], const int N);
+void FillRand(char start, char end, char array[], const int N);
+void FillRand(int start, int end, int array[N1][N2], const int N1, const int N2);
+void FillRand(double start, double end, double array[N1][N2], const int N1, const int N2);
+void FillRand(char start, char end, char array[N1][N2], const int N1, const int N2);
+//Функция для заполнения массива уникальными значениями из диапазона.
+void UniqueFillRand(int start, int end, int array[], const int N);
+void UniqueFillRand(double start, double end, double array[], const int N);
+void UniqueFillRand(char start, char end, char array[], const int N);
+void UniqueFillRand(int start, int end, int array[N1][N2], const int N1, const int N2);
+void UniqueFillRand(double start, double end, double array[N1][N2], const int N1, const int N2);
+void UniqueFillRand(char start, char end, char array[N1][N2], const int N1, const int N2);
+//Сумма всех чисел массива.
+int Sum(int array[], const int N);
+double Sum(double array[], const int N);
+char Sum(char array[], const int N);
+int Sum(int array[N1][N2], const int N1, const int N2);
+double Sum(double array[N1][N2], const int N1, const int N2);
+char Sum(char array[N1][N2], const int N1, const int N2);
+//Среднее арифметическое значение в массиве.
+int Avg(int array[], const int N);
+double Avg(double array[], const int N);
+char Avg(char array[], const int N);
+int Avg(int array[N1][N2], const int N1, const int N2);
+double Avg(double array[N1][N2], const int N1, const int N2);
+char Avg(char array[N1][N2], const int N1, const int N2);
+//Минимальное значение в массиве.
+int minValueIn(int array[], const int N);
+double minValueIn(double array[], const int N);
+char minValueIn(char array[], const int N);
+int minValueIn(int array[N1][N2], const int N1, const int N2);
+double minValueIn(double array[N1][N2], const int N1, const int N2);
+char minValueIn(char array[N1][N2], const int N1, const int N2);
+//Максимальное значение в массиве.
+int maxValueIn(int array[], const int N);
+double maxValueIn(double array[], const int N);
+char maxValueIn(char array[], const int N);
+int maxValueIn(int array[N1][N2], const int N1, const int N2);
+double maxValueIn(double array[N1][N2], const int N1, const int N2);
+char maxValueIn(char array[N1][N2], const int N1, const int N2);
+//Сдвиг массива влево.
+void shiftLeft(int array[], const int N, int NumElem);
+void shiftLeft(double array[], const int N, int NumElem);
+void shiftLeft(char array[], const int N, int NumElem);
+void shiftLeft(int array[N1][N2], int N1, int N2, int NumElem);
+void shiftLeft(double array[N1][N2], int N1, int N2, int NumElem);
+void shiftLeft(char array[N1][N2], int N1, int N2, int NumElem);
+//Сдвиг массива вправо.
+void shiftRight(int array[], const int N, int NumElem);
+void shiftRight(double array[], const int N, int NumElem);
+void shiftRight(char array[], const int N, int NumElem);
+void shiftRight(int array[N1][N2], int N1, int N2, int NumElem);
+void shiftRight(double array[N1][N2], int N1, int N2, int NumElem);
+void shiftRight(char array[N1][N2], int N1, int N2, int NumElem);
+//Сортировка массива
+void Sort(int array[], const int N);
+void Sort(double array[], const int N);
+void Sort(char array[], const int N);
+void Sort(int array[N1][N2], const int N1, const int N2);
+void Sort(double array[N1][N2], const int N1, const int N2);
+void Sort(char array[N1][N2], const int N1, const int N2);
+//Функция поиска значения в массиве.
+bool SearchTarget(int array[], int N, int TargetKey);
+bool SearchTarget(double array[], int N, double TargetKey);
+bool SearchTarget(char array[], int N, char TargetKey);
+bool SearchTarget(int array[N1][N2], int N1, int N2, int TargetKey);
+bool SearchTarget(double array[N1][N2], int N1, int N2, double TargetKey);
+bool SearchTarget(char array[N1][N2], int N1, int N2, char TargetKey);
+//Функция поиска дубликатов.
+void Search(int array[], const int N);
+//Главная функция.
 void main()
 {
 	setlocale(LC_ALL, "");
-	const int N = 10;
-	int array[N];
-	UniqueFillRand(1, 10, array, N);
-	Print(array, N);
-	//Search(array, N);
-	cout << Avg(array, N);
+	double array[N1][N2];
+	UniqueFillRand(10, 100, array, N1, N2);
+	Print(array, N1, N2);
+	cout << endl;
+	Sort(array, N1, N2);
+	Print(array, N1, N2);
 }
-void Print(int array[], const int N)//Вывод массива в консоль.
+//Вывод массива в консоль.
+void Print(int array[], const int N)
 {
-	for (int i = 0; i < N; i++)
-		cout << array[i] << " ";
+	for (int i = 0; i < N; i++) cout << array[i] << " ";
 	cout << endl;
 }
-int randomize(int start, int end)//Генерация случайного числа из диапазона.
+void Print(double array[], const int N)
+{
+	for (int i = 0; i < N; i++) cout << array[i] << " ";
+	cout << endl;
+}
+void Print(char array[], const int N)
+{
+	for (int i = 0; i < N; i++) cout << array[i] << " ";
+	cout << endl;
+}
+void Print(int array[N1][N2], const int N1, const int N2)
+{
+	for (int i = 0; i < N1; i++)
+	{
+		for (int j = 0; j < N2; j++) cout << array[i][j] << "\t";
+		cout << endl;
+	}
+}
+void Print(double array[N1][N2], const int N1, const int N2)
+{
+	for (int i = 0; i < N1; i++)
+	{
+		for (int j = 0; j < N2; j++) cout << array[i][j] << "\t";
+		cout << endl;
+	}
+}
+void Print(char array[N1][N2], const int N1, const int N2)
+{
+	for (int i = 0; i < N1; i++)
+	{
+		for (int j = 0; j < N2; j++) cout << array[i][j] << "\t";
+		cout << endl;
+	}
+}
+//Генерация случайного числа из диапазона
+int randomize(int start, int end)
 {
 	int random = 0;
 	random = start + rand() % (end - start + 1);
 	return random;
 }
-void FillRand(int start, int end, int array[], const int N)//Заполнение массива случайными числами
+double randomize(double start, double end)
 {
-	for (int i = 0; i < N; i++)
-		array[i] = randomize(start, end);
+	double random = 0;
+	random = start + ((double)rand() / (double)RAND_MAX) * (end - start + 0.01);
+	return random;
 }
-void UniqueFillRand(int start, int end, int array[], const int N)//Функция для заполнения массива уникальными числами из диапазона.
+char randomize(char start, char end)
 {
-	if (end - start+1 < N)
+	char random = 0;
+	random = start + rand() % (end - start + 1);
+	return random;
+}
+//Заполнение массива случайными значениями
+void FillRand(int start, int end, int array[], const int N)
+{
+	for (int i = 0; i < N; i++) array[i] = randomize(start, end);
+}
+void FillRand(double start, double end, double array[], const int N)
+{
+	for (int i = 0; i < N; i++) array[i] = randomize(start, end);
+}
+void FillRand(char start, char end, char array[], const int N)
+{
+	for (int i = 0; i < N; i++) array[i] = randomize(start, end);
+}
+void FillRand(int start, int end, int array[N1][N2], const int N1, const int N2)
+{
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++) array[i][j] = randomize(start, end);
+}
+void FillRand(double start, double end, double array[N1][N2], const int N1, const int N2)
+{
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++) array[i][j] = randomize(start, end);
+}
+void FillRand(char start, char end, char array[N1][N2], const int N1, const int N2)
+{
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++) array[i][j] = randomize(start, end);
+}
+//Функция для заполнения массива уникальными числами из диапазона.
+void UniqueFillRand(int start, int end, int array[], const int N)
+{
+	if (end - start + 1 < N)
 	{
 		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
 		char choose = 0;
@@ -52,7 +196,6 @@ void UniqueFillRand(int start, int end, int array[], const int N)//Функци�
 			FillRand(start, end, array, N);
 		return;
 	}
-	srand(time(NULL));
 	int uniq = 0;
 	for (int i = 0; i < N; i++)
 	{
@@ -62,65 +205,387 @@ void UniqueFillRand(int start, int end, int array[], const int N)//Функци�
 		} while (SearchTarget(array, i, uniq));
 		array[i] = uniq;
 	}
-} 
-float Sum(int array[], const int N)//Сумма всех чисел массива.
+}
+void UniqueFillRand(double start, double end, double array[], const int N)
 {
-	float sum = 0;
+	if (end - start + 1 < N)
+	{
+		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
+		char choose = 0;
+		cin >> choose;
+		if (choose == 'Y' || choose == 'y')
+			FillRand(start, end, array, N);
+		return;
+	}
+	double uniq = 0;
 	for (int i = 0; i < N; i++)
 	{
-		sum += array[i];
+		do
+		{
+			uniq = randomize(start, end);
+		} while (SearchTarget(array, i, uniq));
+		array[i] = uniq;
 	}
+}
+void UniqueFillRand(char start, char end, char array[], const int N)
+{
+	if (end - start + 1 < N)
+	{
+		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
+		char choose = 0;
+		cin >> choose;
+		if (choose == 'Y' || choose == 'y')
+			FillRand(start, end, array, N);
+		return;
+	}
+	char uniq = 0;
+	for (int i = 0; i < N; i++)
+	{
+		do
+		{
+			uniq = randomize(start, end);
+		} while (SearchTarget(array, i, uniq));
+		array[i] = uniq;
+	}
+}
+void UniqueFillRand(int start, int end, int array[N1][N2], const int N1, const int N2)
+{
+	if (end - start + 1 < N1 * N2)
+	{
+		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
+		char choose = 0;
+		cin >> choose;
+		if (choose == 'Y' || choose == 'y')
+			FillRand(start, end, array, N1, N2);
+		return;
+	}
+	int uniq = 0;
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+		{
+			do
+			{
+				uniq = randomize(start, end);
+			} while (SearchTarget(array, i, j, uniq));
+			array[i][j] = uniq;
+		}
+}
+void UniqueFillRand(double start, double end, double array[N1][N2], const int N1, const int N2)
+{
+	if (end - start + 1 < N1 * N2)
+	{
+		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
+		char choose = 0;
+		cin >> choose;
+		if (choose == 'Y' || choose == 'y')
+			FillRand(start, end, array, N1, N2);
+		return;
+	}
+	double uniq = 0;
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+		{
+			do
+			{
+				uniq = randomize(start, end);
+			} while (SearchTarget(array, i, j, uniq));
+			array[i][j] = uniq;
+		}
+}
+void UniqueFillRand(char start, char end, char array[N1][N2], const int N1, const int N2)
+{
+	if (end - start + 1 < N1 * N2)
+	{
+		cout << "Диапазон Start-End не подходит для заполнения массива уникальными числами, массив будет заполнен с повторениями.\nПродолжить? Y/N" << endl;
+		char choose = 0;
+		cin >> choose;
+		if (choose == 'Y' || choose == 'y')
+			FillRand(start, end, array, N1, N2);
+		return;
+	}
+	char uniq = 0;
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+		{
+			do
+			{
+				uniq = randomize(start, end);
+			} while (SearchTarget(array, i, j, uniq));
+			array[i][j] = uniq;
+		}
+}
+//Сумма всех чисел массива.
+int Sum(int array[], const int N)
+{
+	int sum = 0;
+	for (int i = 0; i < N; i++) sum += array[i];
 	return sum;
 }
-float Avg(int array[], const int N)//Среднее арифметическое значение в массиве.
+double Sum(double array[], const int N)
 {
-	return (float)Sum(array, N) / N;
+	double sum = 0;
+	for (int i = 0; i < N; i++) sum += array[i];
+	return sum;
 }
-int minValueIn(int array[], const int N)//Минимальное значение в массиве
+char Sum(char array[], const int N)
+{
+	char sum = 0;
+	for (int i = 0; i < N; i++) sum += array[i];
+	return sum;
+}
+int Sum(int array[N1][N2], const int N1, const int N2)
+{
+	int sum = 0;
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) sum += array[i][j];
+	return sum;
+}
+double Sum(double array[N1][N2], const int N1, const int N2)
+{
+	double sum = 0;
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) sum += array[i][j];
+	return sum;
+}
+char Sum(char array[N1][N2], const int N1, const int N2)
+{
+	char sum = 0;
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) sum += array[i][j];
+	return sum;
+}
+//Среднее арифметическое значение в массиве.
+int Avg(int array[], const int N)
+{
+	return (double)Sum(array, N) / N;
+}
+double Avg(double array[], const int N)
+{
+	return Sum(array, N) / N;
+}
+char Avg(char array[], const int N)
+{
+	return Sum(array, N) / N;
+}
+int Avg(int array[N1][N2], const int N1, const int N2)
+{
+	return (double)Sum(array, N1, N2) / N1 * N2;
+}
+double Avg(double array[N1][N2], const int N1, const int N2)
+{
+	return Sum(array, N1, N2) / N1 * N2;
+}
+char Avg(char array[N1][N2], const int N1, const int N2)
+{
+	return Sum(array, N1, N2) / N1 * N2;
+}
+//Минимальное значение в массиве
+int minValueIn(int array[], const int N)
 {
 	int min = array[0];
-	for (int i = 0; i < N; i++)
-	{
-		if (array[i] < min)
-			min = array[i];
-	}
+	for (int i = 0; i < N; i++) if (array[i] < min) min = array[i];
 	return min;
 }
-int maxValueIn(int array[], const int N)//Максимальное значение в массиве
+double minValueIn(double array[], const int N)
+{
+	double min = array[0];
+	for (int i = 0; i < N; i++) if (array[i] < min) min = array[i];
+	return min;
+}
+char minValueIn(char array[], const int N)
+{
+	char min = array[0];
+	for (int i = 0; i < N; i++) if (array[i] < min) min = array[i];
+	return min;
+}
+int minValueIn(int array[N1][N2], const int N1, const int N2)
+{
+	int min = array[0][0];
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] < min) min = array[i][j];
+	return min;
+}
+double minValueIn(double array[N1][N2], const int N1, const int N2)
+{
+	double min = array[0][0];
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] < min) min = array[i][j];
+	return min;
+}
+char minValueIn(char array[N1][N2], const int N1, const int N2)
+{
+	char min = array[0][0];
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] < min) min = array[i][j];
+	return min;
+}
+//Максимальное значение в массиве
+int maxValueIn(int array[], const int N)
 {
 	int max = array[0];
-	for (int i = 0; i < N; i++)
-	{
-		if (array[i] > max)
-			max = array[i];
-	}
+	for (int i = 0; i < N; i++) if (array[i] > max) max = array[i];
 	return max;
 }
-void shiftLeft(int array[], const int N, int NumElem)//Сдвиг массива влево
+double maxValueIn(double array[], const int N)
+{
+	double max = array[0];
+	for (int i = 0; i < N; i++) if (array[i] > max) max = array[i];
+	return max;
+}
+char maxValueIn(char array[], const int N)
+{
+	char max = array[0];
+	for (int i = 0; i < N; i++) if (array[i] > max) max = array[i];
+	return max;
+}
+int maxValueIn(int array[N1][N2], const int N1, const int N2)
+{
+	int max = array[0][0];
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] > max) max = array[i][j];
+	return max;
+}
+double maxValueIn(double array[N1][N2], const int N1, const int N2)
+{
+	double max = array[0][0];
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] > max) max = array[i][j];
+	return max;
+}
+char maxValueIn(char array[N1][N2], const int N1, const int N2)
+{
+	char max = array[0][0];
+	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] > max) max = array[i][j];
+	return max;
+}
+//Сдвиг массива влево
+void shiftLeft(int array[], const int N, int NumElem)
 {
 	for (int j = 0; j < NumElem; j++)
 	{
 		int tmp = array[0];
-		for (int i = 0; i < N - 1; i++)
-		{
-			array[i] = array[i + 1];
-		}
+		for (int i = 0; i < N - 1; i++) array[i] = array[i + 1];
 		array[N - 1] = tmp;
 	}
 }
-void shiftRight(int array[], const int N, int NumElem)//Сдвиг массива вправо
+void shiftLeft(double array[], const int N, int NumElem)
+{
+	for (int j = 0; j < NumElem; j++)
+	{
+		double tmp = array[0];
+		for (int i = 0; i < N - 1; i++) array[i] = array[i + 1];
+		array[N - 1] = tmp;
+	}
+}
+void shiftLeft(char array[], const int N, int NumElem)
+{
+	for (int j = 0; j < NumElem; j++)
+	{
+		char tmp = array[0];
+		for (int i = 0; i < N - 1; i++) array[i] = array[i + 1];
+		array[N - 1] = tmp;
+	}
+}
+void shiftLeft(int array[N1][N2], int N1, int N2, int NumElem)
+{
+	for (int k = 0; k < NumElem; k++)
+	{
+		int tmp = array[0][0];
+		for (int j = 0; j < N1; j++)
+		{
+			for (int i = 0; i < N2 - 1; i++) array[j][i] = array[j][i + 1];
+			if (j < N1 - 1) array[j][N2 - 1] = array[j + 1][0];
+		}
+		array[N1 - 1][N2 - 1] = tmp;
+	}
+}
+void shiftLeft(double array[N1][N2], int N1, int N2, int NumElem)
+{
+	for (int k = 0; k < NumElem; k++)
+	{
+		double tmp = array[0][0];
+		for (int j = 0; j < N1; j++)
+		{
+			for (int i = 0; i < N2 - 1; i++) array[j][i] = array[j][i + 1];
+			if (j < N1 - 1) array[j][N2 - 1] = array[j + 1][0];
+		}
+		array[N1 - 1][N2 - 1] = tmp;
+	}
+}
+void shiftLeft(char array[N1][N2], int N1, int N2, int NumElem)
+{
+	for (int k = 0; k < NumElem; k++)
+	{
+		char tmp = array[0][0];
+		for (int j = 0; j < N1; j++)
+		{
+			for (int i = 0; i < N2 - 1; i++) array[j][i] = array[j][i + 1];
+			if (j < N1 - 1) array[j][N2 - 1] = array[j + 1][0];
+		}
+		array[N1 - 1][N2 - 1] = tmp;
+	}
+}
+//Сдвиг массива вправо
+void shiftRight(int array[], const int N, int NumElem)
 {
 	for (int j = 0; j < NumElem; j++)
 	{
 		int tmp = array[N - 1];
-		for (int i = N - 2; i >= 0; i--)
-		{
-			array[i + 1] = array[i];
-		}
+		for (int i = N - 2; i >= 0; i--) array[i + 1] = array[i];
 		array[0] = tmp;
 	}
 }
-void Sort(int array[], const int N)//Сортировка массива
+void shiftRight(double array[], const int N, int NumElem)
+{
+	for (int j = 0; j < NumElem; j++)
+	{
+		double tmp = array[N - 1];
+		for (int i = N - 2; i >= 0; i--) array[i + 1] = array[i];
+		array[0] = tmp;
+	}
+}
+void shiftRight(char array[], const int N, int NumElem)
+{
+	for (int j = 0; j < NumElem; j++)
+	{
+		char tmp = array[N - 1];
+		for (int i = N - 2; i >= 0; i--) array[i + 1] = array[i];
+		array[0] = tmp;
+	}
+}
+void shiftRight(int array[N1][N2], int N1, int N2, int NumElem)
+{
+	for (int k = 0; k < NumElem; k++)
+	{
+		int tmp = array[N1 - 1][N2 - 1];
+		for (int j = N1 - 1; j >= 0; j--)
+		{
+			for (int i = N2 - 1; i >= 0; i--) array[j][i] = array[j][i - 1];
+			if (j > 0) array[j][0] = array[j - 1][N2 - 1];
+		}
+		array[0][0] = tmp;
+	}
+}
+void shiftRight(double array[N1][N2], int N1, int N2, int NumElem)
+{
+	for (int k = 0; k < NumElem; k++)
+	{
+		double tmp = array[N1 - 1][N2 - 1];
+		for (int j = N1 - 1; j >= 0; j--)
+		{
+			for (int i = N2 - 1; i >= 0; i--) array[j][i] = array[j][i - 1];
+			if (j > 0) array[j][0] = array[j - 1][N2 - 1];
+		}
+		array[0][0] = tmp;
+	}
+}
+void shiftRight(char array[N1][N2], int N1, int N2, int NumElem)
+{
+	for (int k = 0; k < NumElem; k++)
+	{
+		char tmp = array[N1 - 1][N2 - 1];
+		for (int j = N1 - 1; j >= 0; j--)
+		{
+			for (int i = N2 - 1; i >= 0; i--) array[j][i] = array[j][i - 1];
+			if (j > 0) array[j][0] = array[j - 1][N2 - 1];
+		}
+		array[0][0] = tmp;
+	}
+}
+//Сортировка массива
+void Sort(int array[], const int N)
 {
 	int buffer = 0;
 	for (int i = 1; i < N; i++)
@@ -133,7 +598,76 @@ void Sort(int array[], const int N)//Сортировка массива
 		}
 	}
 }
-void Search(int array[], const int N)//Функция поиска дубликатов в массиве.PS.Возможно не самая лучшая реализация, но я хотел попробовать что такое динамический массив и как он будет работать в таких условиях, а еще хотел выполнять поиск в несортированном массиве. Она далека от идеала и иногда выдает свообразную ошибку, если дать ей массив с большим количеством чисел большим и диапазоном генерации, больше 1000, но она все равно выполнится корректно.
+void Sort(double array[], const int N)
+{
+	double buffer = 0;
+	for (int i = 1; i < N; i++)
+	{
+		for (int j = i; j > 0 && array[j - 1] > array[j]; j--)
+		{
+			buffer = array[j - 1];
+			array[j - 1] = array[j];
+			array[j] = buffer;
+		}
+	}
+}
+void Sort(char array[], const int N)
+{
+	char buffer = 0;
+	for (int i = 1; i < N; i++)
+	{
+		for (int j = i; j > 0 && array[j - 1] > array[j]; j--)
+		{
+			buffer = array[j - 1];
+			array[j - 1] = array[j];
+			array[j] = buffer;
+		}
+	}
+}
+void Sort(int array[N1][N2], const int N1, const int N2)
+{
+	int buffer = 0;
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+			for (int k = 0; k < N1; k++)
+				for (int l = 0; l < N2; l++)
+					if (array[i][j] < array[k][l])
+					{
+						buffer = array[k][l];
+						array[k][l] = array[i][j];
+						array[i][j] = buffer;
+					}
+}
+void Sort(double array[N1][N2], const int N1, const int N2)
+{
+	double buffer = 0;
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+			for (int k = 0; k < N1; k++)
+				for (int l = 0; l < N2; l++)
+					if (array[i][j] < array[k][l])
+					{
+						buffer = array[k][l];
+						array[k][l] = array[i][j];
+						array[i][j] = buffer;
+					}
+}
+void Sort(char array[N1][N2], const int N1, const int N2)
+{
+	char buffer = 0;
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+			for (int k = 0; k < N1; k++)
+				for (int l = 0; l < N2; l++)
+					if (array[i][j] < array[k][l])
+					{
+						buffer = array[k][l];
+						array[k][l] = array[i][j];
+						array[i][j] = buffer;
+					}
+}
+//Функция поиска дубликатов в массиве.
+void Search(int array[], const int N)
 {
 	int dynamicrange = 0;
 	int count = 1;
@@ -161,14 +695,43 @@ void Search(int array[], const int N)//Функция поиска дублик�
 		}
 	}
 }
-bool SearchTarget(int array[], int N, int TargetKey)//Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
+//Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
+bool SearchTarget(int array[], int N, int TargetKey)
 {
 	for (int i = 0; i < N; i++)
-	{
-		if (array[i] == TargetKey)
-		{
-			return true;
-		}
-	}
+		if (array[i] == TargetKey) return true;
+	return false;
+}
+bool SearchTarget(double array[], int N, double TargetKey)
+{
+	for (int i = 0; i < N; i++)
+		if (array[i] == TargetKey) return true;
+	return false;
+}
+bool SearchTarget(char array[], int N, char TargetKey)
+{
+	for (int i = 0; i < N; i++)
+		if (array[i] == TargetKey) return true;
+	return false;
+}
+bool SearchTarget(int array[N1][N2], int N1, int N2, int TargetKey)
+{
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+			if (array[i][j] == TargetKey) return true;
+	return false;
+}
+bool SearchTarget(double array[N1][N2], int N1, int N2, double TargetKey)
+{
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+			if (array[i][j] == TargetKey) return true;
+	return false;
+}
+bool SearchTarget(char array[N1][N2], int N1, int N2, char TargetKey)
+{
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+			if (array[i][j] == TargetKey) return true;
 	return false;
 }

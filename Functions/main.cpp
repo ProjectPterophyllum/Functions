@@ -33,3 +33,28 @@ double Divide(int a, int b)
 {
 	return (double)a / b;
 }
+
+/*for (int i = 0; i < N1; i++)
+	{
+		for (int j = 1; j < N2; j++)
+		{
+			for (int k = j; k > 0 && array[i][k - 1] > array[i][k]; k--)
+			{
+				buffer = array[i][k - 1];
+				array[i][k - 1] = array[i][k];
+				array[i][k] = buffer;
+			}
+		}//Строки
+	}*/
+	/*for (int i = 0; i < N1; i++)
+	{
+		for (int j = 1; j < N2; j++)
+		{
+			for (int k = j; k > 0 && array[k - 1][i] > array[k][i]; k--)
+			{
+				buffer = array[k - 1][i];
+				array[k - 1][i] = array[k][i];
+				array[k][i] = buffer;
+			}//Столбцы
+		}
+	}*/
