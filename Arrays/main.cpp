@@ -617,8 +617,8 @@ void Sort(int array[N1][N2], const int N1, const int N2)
 	int buffer = 0;
 	for (int i = 0; i < N1; i++)
 		for (int j = 0; j < N2; j++)
-			for (int k = 0; k < N1; k++)
-				for (int l = 0; l < N2; l++)
+			for (int k = i; k < N1; k++)
+				for (int l = k == i ? j + i : 0; l < N2; l++)
 					if (array[i][j] < array[k][l])
 					{
 						buffer = array[k][l];
@@ -631,8 +631,8 @@ void Sort(double array[N1][N2], const int N1, const int N2)
 	double buffer = 0;
 	for (int i = 0; i < N1; i++)
 		for (int j = 0; j < N2; j++)
-			for (int k = 0; k < N1; k++)
-				for (int l = 0; l < N2; l++)
+			for (int k = i; k < N1; k++)
+				for (int l = k == i ? j + i : 0; l < N2; l++)
 					if (array[i][j] < array[k][l])
 					{
 						buffer = array[k][l];
@@ -645,8 +645,8 @@ void Sort(char array[N1][N2], const int N1, const int N2)
 	char buffer = 0;
 	for (int i = 0; i < N1; i++)
 		for (int j = 0; j < N2; j++)
-			for (int k = 0; k < N1; k++)
-				for (int l = 0; l < N2; l++)
+			for (int k = i; k < N1; k++)
+				for (int l = k == i ? j + i : 0; l < N2; l++)
 					if (array[i][j] < array[k][l])
 					{
 						buffer = array[k][l];
