@@ -619,7 +619,7 @@ void Sort(int array[N1][N2], const int N1, const int N2)
 		for (int j = 0; j < N2; j++)
 			for (int k = i; k < N1; k++)
 				for (int l = k == i ? j + i : 0; l < N2; l++)
-					if (array[i][j] < array[k][l])
+					if (array[i][j] > array[k][l])
 					{
 						buffer = array[k][l];
 						array[k][l] = array[i][j];
@@ -633,7 +633,7 @@ void Sort(double array[N1][N2], const int N1, const int N2)
 		for (int j = 0; j < N2; j++)
 			for (int k = i; k < N1; k++)
 				for (int l = k == i ? j + i : 0; l < N2; l++)
-					if (array[i][j] < array[k][l])
+					if (array[i][j] > array[k][l])
 					{
 						buffer = array[k][l];
 						array[k][l] = array[i][j];
@@ -647,7 +647,7 @@ void Sort(char array[N1][N2], const int N1, const int N2)
 		for (int j = 0; j < N2; j++)
 			for (int k = i; k < N1; k++)
 				for (int l = k == i ? j + i : 0; l < N2; l++)
-					if (array[i][j] < array[k][l])
+					if (array[i][j] > array[k][l])
 					{
 						buffer = array[k][l];
 						array[k][l] = array[i][j];
