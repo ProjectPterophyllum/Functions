@@ -263,7 +263,7 @@ void UniqueFillRand(int start, int end, int array[N1][N2], const int N1, const i
 			do
 			{
 				uniq = randomize(start, end);
-			} while (SearchTarget(array, i, j, uniq));
+			} while (SearchTarget(array, N1, N2, uniq));
 			array[i][j] = uniq;
 		}
 }
@@ -276,7 +276,7 @@ void UniqueFillRand(double start, double end, double array[N1][N2], const int N1
 			do
 			{
 				uniq = randomize(start, end);
-			} while (SearchTarget(array, i, j, uniq));
+			} while (SearchTarget(array, N1, N2, uniq));
 			array[i][j] = uniq;
 		}
 }
