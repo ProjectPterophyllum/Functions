@@ -1,4 +1,5 @@
 #pragma once
+#include "const.h"
 //Сортировка массива
 template <typename T1>
 void Sort(T1 array[], const int N)

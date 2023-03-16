@@ -1,4 +1,21 @@
 #pragma once
+#include "const.h"
+//Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
+template <typename T1>
+bool SearchTarget(T1 array[], int N, T1 TargetKey)
+{
+	for (int i = 0; i < N; i++)
+		if (array[i] == TargetKey) return true;
+	return false;
+}
+template <typename T1>
+bool SearchTarget(T1 array[N1][N2], int N1, int N2, T1 TargetKey)
+{
+	for (int i = 0; i < N1; i++)
+		for (int j = 0; j < N2; j++)
+			if (array[i][j] == TargetKey) return true;
+	return false;
+}
 //Функция поиска дубликатов в массиве.
 template <typename T1>
 void Search(T1 array[], const int N)
@@ -52,20 +69,4 @@ void Search(T1 array[N1][N2], const int N1, const int N2)
 			}
 			count = 1;
 		}
-}
-//Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
-template <typename T1>
-bool SearchTarget(T1 array[], int N, T1 TargetKey)
-{
-	for (int i = 0; i < N; i++)
-		if (array[i] == TargetKey) return true;
-	return false;
-}
-template <typename T1>
-bool SearchTarget(T1 array[N1][N2], int N1, int N2, T1 TargetKey)
-{
-	for (int i = 0; i < N1; i++)
-		for (int j = 0; j < N2; j++)
-			if (array[i][j] == TargetKey) return true;
-	return false;
 }

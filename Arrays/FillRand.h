@@ -1,4 +1,6 @@
 #pragma once
+#include "randomize.h"
+#include "Search.h"
 //«аполнение массива случайными значени€ми
 template <typename T1>
 void FillRand(T1 start, T1 end, T1 array[], const int N)

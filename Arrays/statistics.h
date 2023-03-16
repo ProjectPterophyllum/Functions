@@ -1,4 +1,5 @@
 #pragma once
+#include "const.h"
 //Сумма всех чисел массива.
 template <typename T1>
 T1 Sum(T1 array[], const int N)

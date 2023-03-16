@@ -1,4 +1,5 @@
 #pragma once
+#include "const.h"
 //Сдвиг массива влево
 template <typename T1>
 void shiftLeft(T1 array[], const int N, int NumElem)

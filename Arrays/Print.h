@@ -1,4 +1,5 @@
 #pragma once
+#include "const.h"
 //Вывод массива в консоль.
 template <typename T1>
 void Print(T1 array[], const int N)
