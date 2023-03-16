@@ -6,6 +6,7 @@
 #include "Shift.h"
 #include "randomize.h"
 #include "Search.h"
+#include "statistics.h"
 
 //Главная функция.
 void main()
@@ -18,6 +19,11 @@ void main()
 	Sort(array, N1, N2);
 	Print(array, N1, N2);
 	Search(array, N1, N2);
+	cout << endl << "Max: " << maxValueIn(array, N1, N2)
+		<< endl << "Min: " << minValueIn(array, N1, N2)
+		<< endl << "Sum: " << Sum(array, N1, N2)
+		<< endl << "Avg: " << Avg(array, N1, N2);
+
 }
 
 

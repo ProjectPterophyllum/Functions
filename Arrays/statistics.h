@@ -17,14 +17,15 @@ T1 Sum(T1 array[N1][N2], const int N1, const int N2)
 }
 //Среднее арифметическое значение в массиве.
 template <typename T1>
-T1 Avg(int array[], const int N)
+double Avg(T1 array[], const int N)
 {
 	return (double)Sum(array, N) / N;
 }
 template <typename T1>
-T1 Avg(T1 array[N1][N2], const int N1, const int N2)
+double Avg(T1 array[N1][N2], const int N1, const int N2)
 {
-	return (double)Sum(array, N1, N2) / N1 * N2;
+	int a = N1 * N2;
+	return (double)Sum(array, N1, N2) / a;
 }
 //Минимальное значение в массиве
 template <typename T1>
