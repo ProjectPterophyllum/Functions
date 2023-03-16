@@ -5,6 +5,7 @@
 #include "Sort.h"
 #include "Shift.h"
 #include "randomize.h"
+#include "Search.h"
 ////Вывод массива в консоль.
 //template <typename T1>
 //void Print(T1 array[], int N);
