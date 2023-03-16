@@ -21,6 +21,9 @@
     <ClCompile Include="statistics.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="randomize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdfx.h">
@@ -36,6 +39,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shift.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Print.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="randomize.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

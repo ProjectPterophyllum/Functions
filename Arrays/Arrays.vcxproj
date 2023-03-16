@@ -128,12 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="randomize.cpp" />
     <ClCompile Include="statistics.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="const.h" />
     <ClInclude Include="FillRand.h" />
+    <ClInclude Include="Print.h" />
+    <ClInclude Include="randomize.h" />
     <ClInclude Include="Search.h" />
+    <ClInclude Include="Shift.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="stdfx.h" />
   </ItemGroup>
