@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 #include "const.h"
-//Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
+//Р¤СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° Р·РЅР°С‡РµРЅРёСЏ РІ РјР°СЃСЃРёРІРµ, РІРѕР·РІСЂР°С‰Р°РµС‚ true РёР»Рё false, РµСЃР»Рё Р·РЅР°С‡РµРЅРёРµ РЅР°Р№РґРµРЅРѕ/РЅРµ РЅР°Р№РґРµРЅРѕ.
 template <typename T1>
 bool SearchTarget(T1 array[], int N, T1 TargetKey)
 {
@@ -16,7 +16,7 @@ bool SearchTarget(T1 array[N1][N2], int N1, int N2, T1 TargetKey)
 			if (array[i][j] == TargetKey) return true;
 	return false;
 }
-//Функция поиска дубликатов в массиве.
+//Р¤СѓРЅРєС†РёСЏ РїРѕРёСЃРєР° РґСѓР±Р»РёРєР°С‚РѕРІ РІ РјР°СЃСЃРёРІРµ.
 template <typename T1>
 void Search(T1 array[], const int N)
 {
@@ -37,7 +37,7 @@ void Search(T1 array[], const int N)
 		if (count > 1)
 		{
 			arr[dynamicrange - 1] = array[i];
-			cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
+			cout << "Р§РёСЃР»Рѕ - " << arr[dynamicrange - 1] << " РїРѕРІС‚РѕСЂСЏРµС‚СЃСЏ - " << count << " СЂР°Р·" << endl;
 			dynamicrange++;
 		}
 		count = 1;
@@ -64,7 +64,7 @@ void Search(T1 array[N1][N2], const int N1, const int N2)
 			if (count > 1)
 			{
 				arr[dynamicrange - 1] = array[k][i];
-				cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
+				cout << "Р§РёСЃР»Рѕ - " << arr[dynamicrange - 1] << " РїРѕРІС‚РѕСЂСЏРµС‚СЃСЏ - " << count << " СЂР°Р·" << endl;
 				dynamicrange++;
 			}
 			count = 1;

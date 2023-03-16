@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 #include "const.h"
-//Сумма всех чисел массива.
+//РЎСѓРјРјР° РІСЃРµС… С‡РёСЃРµР» РјР°СЃСЃРёРІР°.
 template <typename T1>
 T1 Sum(T1 array[], const int N)
 {
@@ -15,7 +15,7 @@ T1 Sum(T1 array[N1][N2], const int N1, const int N2)
 	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) sum += array[i][j];
 	return sum;
 }
-//Среднее арифметическое значение в массиве.
+//РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ.
 template <typename T1>
 double Avg(T1 array[], const int N)
 {
@@ -27,7 +27,7 @@ double Avg(T1 array[N1][N2], const int N1, const int N2)
 	int a = N1 * N2;
 	return (double)Sum(array, N1, N2) / a;
 }
-//Минимальное значение в массиве
+//РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ
 template <typename T1>
 T1 minValueIn(T1 array[], const int N)
 {
@@ -42,7 +42,7 @@ T1 minValueIn(T1 array[N1][N2], const int N1, const int N2)
 	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] < min) min = array[i][j];
 	return min;
 }
-//Максимальное значение в массиве
+//РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ
 template <typename T1>
 T1 maxValueIn(T1 array[], const int N)
 {

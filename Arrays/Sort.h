@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 #include "const.h"
-//Сортировка массива
+//РЎРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°
 template <typename T1>
 void Sort(T1 array[], const int N)
 {

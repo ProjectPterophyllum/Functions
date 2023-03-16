@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 #include "const.h"
-//Сдвиг массива влево
+//РЎРґРІРёРі РјР°СЃСЃРёРІР° РІР»РµРІРѕ
 template <typename T1>
 void shiftLeft(T1 array[], const int N, int NumElem)
 {
@@ -25,7 +25,7 @@ void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem)
 		array[N1 - 1][N2 - 1] = tmp;
 	}
 }
-//Сдвиг массива вправо
+//РЎРґРІРёРі РјР°СЃСЃРёРІР° РІРїСЂР°РІРѕ
 template <typename T1>
 void shiftRight(T1 array[], const int N, int NumElem)
 {

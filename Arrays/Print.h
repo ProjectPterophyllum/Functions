@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 #include "const.h"
-//Вывод массива в консоль.
+//Р’С‹РІРѕРґ РјР°СЃСЃРёРІР° РІ РєРѕРЅСЃРѕР»СЊ.
 template <typename T1>
 void Print(T1 array[], const int N)
 {
