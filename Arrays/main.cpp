@@ -23,7 +23,6 @@ void main()
 		<< endl << "Min: " << minValueIn(array, N1, N2)
 		<< endl << "Sum: " << Sum(array, N1, N2)
 		<< endl << "Avg: " << Avg(array, N1, N2);
-
 }
 
 

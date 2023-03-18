@@ -1,8 +1,7 @@
 ﻿#pragma once
 #include "const.h"
 //Сортировка массива
-template <typename T1>
-void Sort(T1 array[], const int N)
+template <typename T1>void Sort(T1 array[], const int N)
 {
 	T1 buffer = 0;
 	for (int i = 1; i < N; i++)
@@ -15,8 +14,7 @@ void Sort(T1 array[], const int N)
 		}
 	}
 }
-template <typename T1>
-void Sort(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>void Sort(T1 array[N1][N2], const int N1, const int N2)
 {
 	T1 buffer = 0;
 	for (int i = 0; i < N1; i++)

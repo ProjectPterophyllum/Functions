@@ -1,8 +1,7 @@
 ﻿#pragma once
 #include "const.h"
 //Сдвиг массива влево
-template <typename T1>
-void shiftLeft(T1 array[], const int N, int NumElem)
+template <typename T1>void shiftLeft(T1 array[], const int N, int NumElem)
 {
 	for (int j = 0; j < NumElem; j++)
 	{
@@ -11,8 +10,7 @@ void shiftLeft(T1 array[], const int N, int NumElem)
 		array[N - 1] = tmp;
 	}
 }
-template <typename T1>
-void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem)
+template <typename T1>void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem)
 {
 	for (int k = 0; k < NumElem; k++)
 	{
@@ -26,8 +24,7 @@ void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem)
 	}
 }
 //Сдвиг массива вправо
-template <typename T1>
-void shiftRight(T1 array[], const int N, int NumElem)
+template <typename T1>void shiftRight(T1 array[], const int N, int NumElem)
 {
 	for (int j = 0; j < NumElem; j++)
 	{
@@ -36,8 +33,7 @@ void shiftRight(T1 array[], const int N, int NumElem)
 		array[0] = tmp;
 	}
 }
-template <typename T1>
-void shiftRight(T1 array[N1][N2], int N1, int N2, int NumElem)
+template <typename T1>void shiftRight(T1 array[N1][N2], int N1, int N2, int NumElem)
 {
 	for (int k = 0; k < NumElem; k++)
 	{
