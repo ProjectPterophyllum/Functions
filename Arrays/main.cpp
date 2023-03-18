@@ -4,69 +4,45 @@ using namespace std;
 const int N1 = 10;
 const int N2 = 10;
 //Вывод массива в консоль.
-template <typename T1>
-void Print(T1 array[], int N);
-template <typename T1>
-void Print(T1 array[N1][N2], int N1, int N2);
+template <typename T1>void Print(T1 array[], int N);
+template <typename T1>void Print(T1 array[N1][N2], int N1, int N2);
 //Генерация случайного числа из диапазона.
 int randomize(int start, int end);
 double randomize(double start, double end);
 char randomize(char start, char end);
 //Заполнение массива случайными значениями.
-template <typename T1>
-void FillRand(T1 start, T1 end, T1 array[], const int N);
-template <typename T1>
-void FillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>void FillRand(T1 start, T1 end, T1 array[], const int N);
+template <typename T1>void FillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2);
 //Функция для заполнения массива уникальными значениями из диапазона.
-template <typename T1>
-void UniqueFillRand(T1 start, T1 end, T1 array[], const int N);
-template <typename T1>
-void UniqueFillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>void UniqueFillRand(T1 start, T1 end, T1 array[], const int N);
+template <typename T1>void UniqueFillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2);
 //Сумма всех чисел массива.
-template <typename T1>
-T1 Sum(T1 array[], const int N);
-template <typename T1>
-T1 Sum(T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>T1 Sum(T1 array[], const int N);
+template <typename T1>T1 Sum(T1 array[N1][N2], const int N1, const int N2);
 //Среднее арифметическое значение в массиве.
-template <typename T1>
-T1 Avg(T1 array[], const int N);
-template <typename T1>
-T1 Avg(T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>T1 Avg(T1 array[], const int N);
+template <typename T1>T1 Avg(T1 array[N1][N2], const int N1, const int N2);
 //Минимальное значение в массиве.
-template <typename T1>
-T1 minValueIn(T1 array[], const int N);
-template <typename T1>
-T1 minValueIn(T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>T1 minValueIn(T1 array[], const int N);
+template <typename T1>T1 minValueIn(T1 array[N1][N2], const int N1, const int N2);
 //Максимальное значение в массиве.
-template <typename T1>
-T1 maxValueIn(T1 array[], const int N);
-template <typename T1>
-T1 maxValueIn(T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>T1 maxValueIn(T1 array[], const int N);
+template <typename T1>T1 maxValueIn(T1 array[N1][N2], const int N1, const int N2);
 //Сдвиг массива влево.
-template <typename T1>
-void shiftLeft(T1 array[], const int N, int NumElem);
-template <typename T1>
-void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem);
+template <typename T1>void shiftLeft(T1 array[], const int N, int NumElem);
+template <typename T1>void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem);
 //Сдвиг массива вправо.
-template <typename T1>
-void shiftRight(T1 array[], const int N, int NumElem);
-template <typename T1>
-void shiftRight(T1 array[N1][N2], int N1, int N2, int NumElem);
+template <typename T1>void shiftRight(T1 array[], const int N, int NumElem);
+template <typename T1>void shiftRight(T1 array[N1][N2], int N1, int N2, int NumElem);
 //Сортировка массива
-template <typename T1>
-void Sort(T1 array[], const int N);
-template <typename T1>
-void Sort(T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>void Sort(T1 array[], const int N);
+template <typename T1>void Sort(T1 array[N1][N2], const int N1, const int N2);
 //Функция поиска значения в массиве.
-template <typename T1>
-bool SearchTarget(T1 array[], int N, T1 TargetKey);
-template <typename T1>
-bool SearchTarget(T1 array[N1][N2], int N1, int N2, T1 TargetKey);
+template <typename T1>bool SearchTarget(T1 array[], int N, T1 TargetKey);
+template <typename T1>bool SearchTarget(T1 array[N1][N2], int N1, int N2, T1 TargetKey);
 //Функция поиска дубликатов.
-template <typename T1>
-void Search(T1 array[], const int N);
-template <typename T1>
-void Search(T1 array[N1][N2], const int N1, const int N2);
+template <typename T1>void Search(T1 array[], const int N);
+template <typename T1>void Search(T1 array[N1][N2], const int N1, const int N2);
 //Главная функция.
 void main()
 {
@@ -80,14 +56,12 @@ void main()
 	Search(array, N1, N2);
 }
 //Вывод массива в консоль.
-template <typename T1>
-void Print(T1 array[], const int N)
+template <typename T1>void Print(T1 array[], const int N)
 {
 	for (int i = 0; i < N; i++) cout << array[i] << " ";
 	cout << endl;
 }
-template <typename T1>
-void Print(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>void Print(T1 array[N1][N2], const int N1, const int N2)
 {
 	for (int i = 0; i < N1; i++)
 	{
@@ -115,20 +89,17 @@ char randomize(char start, char end)
 	return random;
 }
 //Заполнение массива случайными значениями
-template <typename T1>
-void FillRand(T1 start, T1 end, T1 array[], const int N)
+template <typename T1>void FillRand(T1 start, T1 end, T1 array[], const int N)
 {
 	for (int i = 0; i < N; i++) array[i] = randomize(start, end);
 }
-template <typename T1>
-void FillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>void FillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2)
 {
 	for (int i = 0; i < N1; i++)
 		for (int j = 0; j < N2; j++) array[i][j] = randomize(start, end);
 }
 //Функция для заполнения массива уникальными числами из диапазона.
-template <typename T1>
-void UniqueFillRand(T1 start, T1 end, T1 array[], const int N)
+template <typename T1>void UniqueFillRand(T1 start, T1 end, T1 array[], const int N)
 {
 	if (end - start < N)
 	{
@@ -149,8 +120,7 @@ void UniqueFillRand(T1 start, T1 end, T1 array[], const int N)
 		array[i] = uniq;
 	}
 }
-template <typename T1>
-void UniqueFillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>void UniqueFillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int N2)
 {
 	if (end - start < N1 * N2)
 	{
@@ -173,64 +143,55 @@ void UniqueFillRand(T1 start, T1 end, T1 array[N1][N2], const int N1, const int 
 		}
 }
 //Сумма всех чисел массива.
-template <typename T1>
-T1 Sum(T1 array[], const int N)
+template <typename T1>T1 Sum(T1 array[], const int N)
 {
 	T1 sum = 0;
 	for (int i = 0; i < N; i++) sum += array[i];
 	return sum;
 }
-template <typename T1>
-T1 Sum(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>T1 Sum(T1 array[N1][N2], const int N1, const int N2)
 {
 	T1 sum = 0;
 	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) sum += array[i][j];
 	return sum;
 }
 //Среднее арифметическое значение в массиве.
-template <typename T1>
-T1 Avg(int array[], const int N)
+template <typename T1>double Avg(int array[], const int N)
 {
 	return (double)Sum(array, N) / N;
 }
-template <typename T1>
-T1 Avg(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>double Avg(T1 array[N1][N2], const int N1, const int N2)
 {
 	return (double)Sum(array, N1, N2) / N1 * N2;
 }
 //Минимальное значение в массиве
-template <typename T1>
-T1 minValueIn(T1 array[], const int N)
+template <typename T1>T1 minValueIn(T1 array[], const int N)
 {
 	T1 min = array[0];
 	for (int i = 0; i < N; i++) if (array[i] < min) min = array[i];
 	return min;
 }
-template <typename T1>
-T1 minValueIn(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>T1 minValueIn(T1 array[N1][N2], const int N1, const int N2)
 {
 	T1 min = array[0][0];
 	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] < min) min = array[i][j];
 	return min;
 }
 //Максимальное значение в массиве
-template <typename T1>
-T1 maxValueIn(T1 array[], const int N)
+template <typename T1>T1 maxValueIn(T1 array[], const int N)
 {
 	T1 max = array[0];
 	for (int i = 0; i < N; i++) if (array[i] > max) max = array[i];
 	return max;
 }
-template <typename T1>
-T1 maxValueIn(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>T1 maxValueIn(T1 array[N1][N2], const int N1, const int N2)
 {
 	T1 max = array[0][0];
 	for (int i = 0; i < N1; i++) for (int j = 0; j < N2; j++) if (array[i][j] > max) max = array[i][j];
 	return max;
 }
 //Сдвиг массива влево
-template <typename T1>
-void shiftLeft(T1 array[], const int N, int NumElem)
+template <typename T1>void shiftLeft(T1 array[], const int N, int NumElem)
 {
 	for (int j = 0; j < NumElem; j++)
 	{
@@ -239,8 +200,7 @@ void shiftLeft(T1 array[], const int N, int NumElem)
 		array[N - 1] = tmp;
 	}
 }
-template <typename T1>
-void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem)
+template <typename T1>void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem)
 {
 	for (int k = 0; k < NumElem; k++)
 	{
@@ -254,8 +214,7 @@ void shiftLeft(T1 array[N1][N2], int N1, int N2, int NumElem)
 	}
 }
 //Сдвиг массива вправо
-template <typename T1>
-void shiftRight(T1 array[], const int N, int NumElem)
+template <typename T1>void shiftRight(T1 array[], const int N, int NumElem)
 {
 	for (int j = 0; j < NumElem; j++)
 	{
@@ -264,8 +223,7 @@ void shiftRight(T1 array[], const int N, int NumElem)
 		array[0] = tmp;
 	}
 }
-template <typename T1>
-void shiftRight(T1 array[N1][N2], int N1, int N2, int NumElem)
+template <typename T1>void shiftRight(T1 array[N1][N2], int N1, int N2, int NumElem)
 {
 	for (int k = 0; k < NumElem; k++)
 	{
@@ -279,8 +237,7 @@ void shiftRight(T1 array[N1][N2], int N1, int N2, int NumElem)
 	}
 }
 //Сортировка массива
-template <typename T1>
-void Sort(T1 array[], const int N)
+template <typename T1>void Sort(T1 array[], const int N)
 {
 	T1 buffer = 0;
 	for (int i = 1; i < N; i++)
@@ -293,8 +250,7 @@ void Sort(T1 array[], const int N)
 		}
 	}
 }
-template <typename T1>
-void Sort(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>void Sort(T1 array[N1][N2], const int N1, const int N2)
 {
 	T1 buffer = 0;
 	for (int i = 0; i < N1; i++)
@@ -309,8 +265,7 @@ void Sort(T1 array[N1][N2], const int N1, const int N2)
 					}
 }
 //Функция поиска дубликатов в массиве.
-template <typename T1>
-void Search(T1 array[], const int N)
+template <typename T1>void Search(T1 array[], const int N)
 {
 	int dynamicrange = 1;
 	int count = 1;
@@ -335,8 +290,7 @@ void Search(T1 array[], const int N)
 		count = 1;
 	}
 }
-template <typename T1>
-void Search(T1 array[N1][N2], const int N1, const int N2)
+template <typename T1>void Search(T1 array[N1][N2], const int N1, const int N2)
 {
 	int dynamicrange = 1;
 	int count = 1;
@@ -363,15 +317,13 @@ void Search(T1 array[N1][N2], const int N1, const int N2)
 		}
 }
 //Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
-template <typename T1>
-bool SearchTarget(T1 array[], int N, T1 TargetKey)
+template <typename T1>bool SearchTarget(T1 array[], int N, T1 TargetKey)
 {
 	for (int i = 0; i < N; i++)
 		if (array[i] == TargetKey) return true;
 	return false;
 }
-template <typename T1>
-bool SearchTarget(T1 array[N1][N2], int N1, int N2, T1 TargetKey)
+template <typename T1>bool SearchTarget(T1 array[N1][N2], int N1, int N2, T1 TargetKey)
 {
 	for (int i = 0; i < N1; i++)
 		for (int j = 0; j < N2; j++)
