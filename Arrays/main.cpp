@@ -25,4 +25,4 @@ void main()
 		<< endl << "Avg: " << Avg(array, N1, N2);
 }
 
-
+y

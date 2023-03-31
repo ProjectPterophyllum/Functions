@@ -24,6 +24,9 @@
     <ClCompile Include="randomize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PushElemToArray.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdfx.h">

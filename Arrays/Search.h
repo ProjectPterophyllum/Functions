@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "const.h"
+#include "PushElemToArray.h"
 //Функция поиска значения в массиве, возвращает true или false, если значение найдено/не найдено.
 template <typename T1>bool SearchTarget(T1 array[], int N, T1 TargetKey)
 {
@@ -33,9 +34,8 @@ template <typename T1>void Search(T1 array[], const int N)
 		}
 		if (count > 1)
 		{
-			arr[dynamicrange - 1] = array[i];
+			push_back(arr, dynamicrange, array[i]);
 			cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
-			dynamicrange++;
 		}
 		count = 1;
 	}
@@ -59,7 +59,7 @@ template <typename T1>void Search(T1 array[N1][N2], const int N1, const int N2)
 			}
 			if (count > 1)
 			{
-				arr[dynamicrange - 1] = array[k][i];
+				push_back(arr, dynamicrange, array[k][i]);
 				cout << "Число - " << arr[dynamicrange - 1] << " повторяется - " << count << " раз" << endl;
 				dynamicrange++;
 			}

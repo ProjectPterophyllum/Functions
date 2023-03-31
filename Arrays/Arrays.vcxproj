@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PushElemToArray.h" />
     <ClCompile Include="randomize.cpp" />
     <ClCompile Include="statistics.h" />
   </ItemGroup>
