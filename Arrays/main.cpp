@@ -24,5 +24,3 @@ void main()
 		<< endl << "Sum: " << Sum(array, N1, N2)
 		<< endl << "Avg: " << Avg(array, N1, N2);
 }
-
-y
